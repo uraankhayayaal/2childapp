@@ -1,4 +1,5 @@
 services:
+
   postgres:
     image: postgres
     container_name: postgres
@@ -8,5 +9,25 @@ services:
       - ./app.env
     volumes:
       - postgres:/var/lib/postgresql/data
+    networks:
+      - postgres
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    ports:
+      - 5050:80
+    env_file:
+      - ./app.env
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    networks:
+      - postgres
+
 volumes:
   postgres:
+  pgadmin:
+
+networks:
+  postgres:
+    driver: bridge
