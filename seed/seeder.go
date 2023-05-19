@@ -9,7 +9,7 @@ import (
 )
 
 var users = []models.User{
-	models.User{
+	{
 		Name:             "Ayaal",
 		Email:            "uraankhayayaal@yandex.ru",
 		Password:         "$2a$10$qND/uzaiU2SXPoEjQtdOAObGjz2AaX99Zpgxm5foLOCLi809bJUkm", // 00000000
@@ -21,7 +21,7 @@ var users = []models.User{
 		CreatedAt:        time.Now(),
 		UpdatedAt:        time.Now(),
 	},
-	models.User{
+	{
 		Name:             "NotVerifiedUser",
 		Email:            "not_verified_user@example.ru",
 		Password:         "$2a$10$qND/uzaiU2SXPoEjQtdOAObGjz2AaX99Zpgxm5foLOCLi809bJUkm", // 00000000
@@ -36,14 +36,14 @@ var users = []models.User{
 }
 
 var posts = []models.Post{
-	models.Post{
+	{
 		Title:     "Title 1",
 		Content:   "Hello world 1",
 		Image:     "https://i.pravatar.cc/300?img=61",
 		CreatedAt: time.Now(),
 		UpdatedAt: time.Now(),
 	},
-	models.Post{
+	{
 		Title:     "Title 2",
 		Content:   "Hello world 2",
 		Image:     "https://i.pravatar.cc/300?img=62",
