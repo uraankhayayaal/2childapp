@@ -10,13 +10,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/go-testfixtures/testfixtures/v3"
 	"github.com/uraankhayayaal/2childapp/initializers"
 	"github.com/uraankhayayaal/2childapp/seed"
-)
-
-var (
-	fixtures *testfixtures.Loader
 )
 
 func SetUpRouter() *gin.Engine {
